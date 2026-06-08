@@ -7,16 +7,13 @@ import ProjectConfirmationEmail from "@/emails/project-confirmation";
 
 export async function submitProjectInquiry(
   formData: FormData
-) {
+): Promise<void> {
   try {
     const website = formData.get("website");
 
     // Honeypot Spam Protection
-
     if (website) {
-      return {
-        success: false,
-      };
+      return;
     }
 
     const name = formData.get("name") as string;
@@ -35,10 +32,7 @@ export async function submitProjectInquiry(
       !budget ||
       !description
     ) {
-      return {
-        success: false,
-        message: "Please complete all required fields.",
-      };
+      throw new Error("Required fields missing");
     }
 
     // Email To OdeyForge
@@ -62,7 +56,7 @@ export async function submitProjectInquiry(
     // Confirmation Email To Client
 
     await resend.emails.send({
-      from: "OdeyForge <noreply@odeyforge.com>",
+      from: "onboarding@resend.dev",
       to: email,
       subject: "We've Received Your Inquiry",
       react: ProjectConfirmationEmail({
@@ -70,18 +64,12 @@ export async function submitProjectInquiry(
       }),
     });
 
-    return {
-      success: true,
-      message:
-        "Your inquiry has been submitted successfully.",
-    };
+    console.log(
+      `New project inquiry submitted by ${name} (${email})`
+    );
   } catch (error) {
-    console.error(error);
+    console.error("Project inquiry failed:", error);
 
-    return {
-      success: false,
-      message:
-        "Something went wrong. Please try again.",
-    };
+    throw new Error("Failed to submit inquiry");
   }
 }
