@@ -25,7 +25,7 @@ const technologies = [
   },
   {
     name: "Node.js",
-    image: "/tech/nodejs1.png",
+    image: "/tech/nodejs2.png",
     description: "Fast and scalable server-side JavaScript runtime.",
   },
   {
