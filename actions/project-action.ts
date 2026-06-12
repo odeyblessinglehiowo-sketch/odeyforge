@@ -38,25 +38,25 @@ export async function submitProjectInquiry(
     // Email To OdeyForge
 
     await resend.emails.send({
-      from: "onboarding@resend.dev",
-      to: "info@odeyforge.com",
-      subject: `New Project Inquiry — ${name}`,
-      react: ProjectInquiryEmail({
-        name,
-        email,
-        phone,
-        company,
-        projectType,
-        budget,
-        timeline,
-        description,
-      }),
-    });
+  from: "OdeyForge <info@odeyforge.com>",
+  to: "info@odeyforge.com",
+  subject: `New Project Inquiry — ${name}`,
+  react: ProjectInquiryEmail({
+    name,
+    email,
+    phone,
+    company,
+    projectType,
+    budget,
+    timeline,
+    description,
+  }),
+});
 
     // Confirmation Email To Client
 
     await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "OdeyForge <noreply@odeyforge.com>",
       to: email,
       subject: "We've Received Your Inquiry",
       react: ProjectConfirmationEmail({
