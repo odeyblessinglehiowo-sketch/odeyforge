@@ -48,31 +48,31 @@ const technologies = [
 
 export default function TechStack() {
   return (
-    <section id="stack" className="py-32">
-      <div className="container-width">
+    <section id="stack" className="py-10 sm:py-18">
+      <div className="mx-auto text-center sm:text-left container-width">
         <div className="mb-20 max-w-4xl">
-  <span className="text-sm font-bold uppercase tracking-wider text-[#818CF8]">
+  <span className="text-sm  font-bold uppercase tracking-wider text-[#818CF8]">
     Technology Stack
   </span>
 
-  <h2 className="mt-4 text-4xl font-bold text-white md:text-4xl">
+  <h2 className="mt-4 text-3xl font-bold text-white md:text-4xl">
     Powered By Industry-Leading Technologies.
   </h2>
 
-  <p className="mt-6 max-w-3xl text-lg leading-relaxed text-zinc-400">
+  <p className="mt-4 max-w-3xl text-lg leading-relaxed text-zinc-400">
     We build modern websites, business software, and scalable digital
     products using proven technologies trusted by leading companies.
   </p>
 </div>
         
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-[-3rem] grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {technologies.map((tech) => (
             <div
               key={tech.name}
               className="group rounded-2xl border border-white/15 bg-white/[0.02] p-2 transition-all duration-300 hover:-translate-y-1 hover:border-[#4F46E5]/50"
             >
-              <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-white/5">
+              <div className="mb-8 flex mx-auto h-10 w-10 sm:h-15 sm:w-15 items-center justify-center rounded-2xl bg-white/5">
                <Image
   src={tech.image}
   alt={tech.name}

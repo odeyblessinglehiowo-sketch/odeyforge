@@ -18,25 +18,25 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="py-24">
-      <div className="container-width">
-        <div className="mb-16 max-w-3xl">
-          <span className="text-sm font-bold uppercase tracking-wider text-[#818CF8]">
-            WHAT WE DO
-          </span>
+    <section id="services" className="py-14 sm:py-15">
+      <div className="text-center md:text-left container-width">
+  <div className="mb-16 max-w-3xl">
+    <span className="text-sm font-bold uppercase tracking-wider text-[#818CF8]">
+      WHAT WE DO
+    </span>
 
-          <h2 className="mt-4 text-3xl font-extrabold text-white md:text-4xl">
-            Technology Solutions Built For Growth.
-          </h2>
+    <h2 className="mt-4 text-3xl font-extrabold text-white md:text-4xl">
+      Technology Solutions Built For Growth.
+    </h2>
 
-          <p className="mt-6 text-lg leading-relaxed text-zinc-400">
-            We help organizations build reliable software,
-            modern digital experiences, and scalable systems
-            that support long-term success.
-          </p>
-        </div>
+    <p className="mt-4 text-lg sm:mt-6 leading-relaxed text-zinc-400">
+      We help organizations build reliable software,
+      modern digital experiences, and scalable systems
+      that support long-term success.
+    </p>
+  </div>
 
-       <div className="grid gap-6 md:grid-cols-3 items-stretch">
+       <div className="mt-[-3rem] grid gap-6 md:grid-cols-3 items-stretch">
           {services.map((service) => (
             <div
               key={service.title}

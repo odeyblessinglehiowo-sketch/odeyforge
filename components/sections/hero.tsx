@@ -22,7 +22,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="container-width py-20 md:py-20">
+      <div className="container-width py-10 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ export default function Hero() {
             Technology Company
           </div>
 
-          <h1 className="mb-8 text-5xl font-bold tracking-tight text-white md:text-7xl">
+          <h1 className="mb-5 tracking-[0.01rem] text-3xl font-bold sm:tracking-tight text-white md:text-7xl">
             Engineering Digital Products That Move Businesses Forward.
           </h1>
 

@@ -34,17 +34,17 @@ const values = [
 export default function About() {
   return (
     <section id="about" className="py-5">
-      <div className="container-width">
+      <div className="mx-auto text-center sm:text-left container-width">
         <div className="max-w-6xl">
           <span className="text-sm font-bold uppercase tracking-wider text-[#818CF8]">
             About OdeyForge
           </span>
 
-          <h2 className="mt-4 text-4xl font-bold text-white md:text-4xl">
+          <h2 className="mt-2 text-3xl font-bold text-white md:text-4xl">
             Technology Built With Purpose.
           </h2>
 
-          <div className="mt-8 space-y-6 text-lg leading-relaxed text-zinc-400">
+          <div className="mt-4 space-y-3 text-lg leading-relaxed text-zinc-400">
             <p>
               Technology is at its best when it solves real problems,
               creates opportunities, and helps people move forward.
